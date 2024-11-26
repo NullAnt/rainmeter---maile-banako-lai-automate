@@ -2,7 +2,7 @@ This is a repo for compiling the game launcher which uses rainmeter as frontend.
 
 Firstly create a "secrets.json" file in it write the following:
 
-``
+```plaintext
 {
     "client_id": "***your client id***",
     "client_secret": "***your client secret***",
@@ -13,5 +13,5 @@ Firstly create a "secrets.json" file in it write the following:
         "token_type": "bearer"
     }
 }
-``
+```
 
