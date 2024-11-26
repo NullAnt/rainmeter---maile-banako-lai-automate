@@ -48,15 +48,15 @@ def check_artwork(games_list:list[:list[:str]]):
 def main():
     file_as_list:list[:str | None] = []
     # list should be in order of display
-    games_list:list[:list[:str]] = [["Genshin Impact", r'"C:\Program Files\HoYoPlay\launcher.exe"'], 
-                                    ["Stardew Valley", r'"D:\Games\Stardew Valley\Stardew Valley.exe"'], 
-                                    ["Valorant", r'"C:\Riot Games\Riot Client\RiotClientServices.exe" --launch-product=valorant --launch-patchline=live'], 
-                                    ["Roblox", r'C:\Users\Britant\AppData\Local\Roblox\Versions\version-eadc3c90bb1a4267\RobloxPlayerBeta.exe'],
-                                    ["Skul-The Hero Slayer", r'"D:\Games\Skul\Skul.exe"'], 
-                                    ["Elden Ring", r'"D:\Games\ELDEN RING\Game\eldenring.exe"'], 
-                                    ["Half Life Source", r'"D:\Games\Half-Life - Source Quadrilogy\Launch Half-Life Source.bat"'], 
-                                    ["Dark Souls 2", r'"D:\Games\Dark Souls 2 - Scholar of the First Sin\language.changer.exe"'], 
-                                    ["Oh My Git", r'"D:\Games\oh-my-git-windows\oh-my-git.exe"']]
+    games_list:list[:list[:str]] = [["Genshin Impact", r'"C:\Program Files\HoYoPlay\launcher.exe"', "119277"], 
+                                    ["Stardew Valley", r'"D:\Games\Stardew Valley\Stardew Valley.exe"', "17000"], 
+                                    ["Valorant", r'"C:\Riot Games\Riot Client\RiotClientServices.exe" --launch-product=valorant --launch-patchline=live', "126459"], 
+                                    ["Roblox", r'C:\Users\Britant\AppData\Local\Roblox\Versions\version-eadc3c90bb1a4267\RobloxPlayerBeta.exe', "17269"],
+                                    ["Skul-The Hero Slayer", r'"D:\Games\Skul\Skul.exe"', "127842"], 
+                                    ["Elden Ring", r'"D:\Games\ELDEN RING\Game\eldenring.exe"', "119133"], 
+                                    ["Half Life Source", r'"D:\Games\Half-Life - Source Quadrilogy\Launch Half-Life Source.bat"', "6744"], 
+                                    ["Dark Souls 2", r'"D:\Games\Dark Souls 2 - Scholar of the First Sin\language.changer.exe"', "2368"], 
+                                    ["Oh My Git", r'"D:\Games\oh-my-git-windows\oh-my-git.exe"', "-1"]]
 
     check_artwork(games_list)    
 
