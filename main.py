@@ -43,11 +43,12 @@ def check_artwork(games_list:list[:list[:str]]):
             return
         else:
             # if no artwork, Download artwork
-            igdb_request.download_artwork(game[0])
+            igdb_request.download_artwork(game[2])
 
 def main():
     file_as_list:list[:str | None] = []
     # list should be in order of display
+    # list in order are: Name, file location, igdb game id
     games_list:list[:list[:str]] = [["Genshin Impact", r'"C:\Program Files\HoYoPlay\launcher.exe"', "119277"], 
                                     ["Stardew Valley", r'"D:\Games\Stardew Valley\Stardew Valley.exe"', "17000"], 
                                     ["Valorant", r'"C:\Riot Games\Riot Client\RiotClientServices.exe" --launch-product=valorant --launch-patchline=live', "126459"], 
