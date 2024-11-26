@@ -38,12 +38,16 @@ def place_games(file_as_list:list, games_list:list[:list[:str]]):
         
 
 def check_artwork(games_list:list[:list[:str]]):
+    artworks_to_download_for_game = []
     for game_number, game in enumerate(games_list):
         if os.path.isfile(fr"C:\Users\Britant\OneDrive\Documents\Rainmeter\Skins\Maile Banako\@Resources\artworks\{game[0].lower().replace(" ", "_")}_artwork"):
             return
         else:
-            # if no artwork, Download artwork
-            igdb_request.download_artwork(game[2])
+            # if no artwork, store all games temporarily to download later
+            artworks_to_download_for_game.append(game[2])
+
+    # download the artworks
+    igdb_request.download_artwork(artworks_to_download_for_game)
 
 def main():
     file_as_list:list[:str | None] = []

@@ -1,7 +1,7 @@
 import requests
 import json
 
-def download_artwork(game: str):
+def download_artwork(game: list):
     with open("secrets.json", "r") as file:
         data = json.load(file)
 
@@ -15,7 +15,7 @@ def download_artwork(game: str):
     }
 
 
-    response = requests.post("https://api.igdb.com/v4/games/",headers=header,data='search "skul"; fields cover.*, artworks.*;')
+    response = requests.post("https://api.igdb.com/v4/artworks/",headers=header,data=f'fields url; where game = ({",".join(game)});')
 
 
     with open("result.json","w") as file:
@@ -35,9 +35,10 @@ if __name__ == "__main__":
         "Authorization":f"Bearer {access_token}"
     }
 
+    game = ["119277", "17000", "119133"]
 
-    response = requests.post("https://api.igdb.com/v4/games/",headers=header,data='search "skul"; fields cover.*, artworks.*;')
-
+    response = requests.post("https://api.igdb.com/v4/artworks/",headers=header,data=f'fields url; where game = (119277,17000,119133); limit 1;') #{", ".join(game)}
+    # Issue: Getting multiple cover img for a single game
 
     with open("result.json","w") as file:
         json.dump(response.json(),file,indent=4)
